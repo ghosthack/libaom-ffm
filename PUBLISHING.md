@@ -22,7 +22,8 @@ central-publishing plugin (0.11.0) stages resolver files such as
 Central rejects it with "Bundle has content that does NOT have a .pom file".
 
 To inspect the signed bundle CI would upload, run the Release workflow
-manually (optionally with a throwaway `version`). It builds the natives on all
-three platforms, then builds the bundle against an unreachable Central URL
-with placeholder credentials and attaches `central-bundle.zip` as a workflow
-artifact; nothing is published.
+manually (optionally with a throwaway `version`; by default the current version
+without `-SNAPSHOT`, since snapshot deploys bypass the unreachable URL). It
+builds the natives on all three platforms, then builds the bundle against an
+unreachable Central URL with placeholder credentials and attaches
+`central-bundle.zip` as a workflow artifact; nothing is published.
